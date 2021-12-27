@@ -207,12 +207,16 @@
       <div
         class="d-flex justify-center"
       >
-        <h1 style="max-width: 542.55px; font-size: 24px; font-weight: 600 ">التطبيقات المميزه</h1>
+        <h1 style="max-width: 542.55px; font-size: 24px; font-weight: 600 ">
+          التطبيقات المميزه
+        </h1>
       </div>
       <div
         class="d-flex justify-center"
       >
-        <h1 style=" font-size: 14px; font-weight: 400 ">تطبيقات تقدم حلول وخدمات مميزه نوصي بتجربتها</h1>
+        <h1 style=" font-size: 14px; font-weight: 400 ">
+          تطبيقات تقدم حلول وخدمات مميزه نوصي بتجربتها
+        </h1>
       </div>
       <div class="d-flex justify-center">
         <v-card
