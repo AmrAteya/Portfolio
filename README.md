@@ -1,4 +1,4 @@
-# Freelancer Theme for Vuetify
+# Zid task
 
 ## Project setup
 ```
