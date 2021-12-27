@@ -1,23 +1,35 @@
 <template>
   <div>
-    <v-img
-      class="justify-center ml-10"
-      src="@/assets/zid-logo.png"
-      max-height="50"
-      max-width="200"
-    />
+    <div class="d-flex justify-center">
+      <v-img
+        src="@/assets/zid-logo.png"
+        max-height="50"
+        max-width="200"
+      />
+    </div>
+    <div class="d-flex justify-center mt-5">
+      <v-icon
+        v-for="(item, i) in items.slice(0, large ? items.length : 3)"
+        :key="i"
+        class="ma-5"
+        color="white"
+        v-text="item.icon"
+      />
+    </div>
     <v-icon
-      v-for="(item, i) in items.slice(0, large ? items.length : 3)"
-      :key="i"
-      large
-      class="ma-5"
-      color="white"
-      v-text="item.icon"
-    />
+      style="position: absolute; bottom: 20px; right: 53px"
+      color="#FFD12F"
+      x-large
+    >
+      mdi-chat
+    </v-icon>
     <v-icon
-      style="position: absolute; bottom: 20px; right: 40px"
-      v-text="iconforsupport"
-    />
+      style="position: absolute; bottom: 20px; left: 53px"
+      color="#FFD12F"
+      x-large
+    >
+      mdi-arrow-up-circle
+    </v-icon>
   </div>
 </template>
 
@@ -50,7 +62,7 @@
             icon: 'mdi-twitter',
           },
         ],
-        iconforsupport: 'mdi-chat',
+        iconforsupport: 'mdi-chat-outline',
       }
     },
   }

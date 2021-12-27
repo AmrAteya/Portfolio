@@ -94,7 +94,7 @@
           style="z-index: 1; position: relative; bottom:-350px; right: 190px"
         />
         <v-img
-          style="border-radius: 50px; z-index: 3"
+          style="border-radius: 50px; z-index: 3; position: relative; top: -50px"
           max-width="45vw"
           height="60vh"
           src="@/assets/video.gif"
@@ -103,7 +103,7 @@
           src="@/assets/Dot Pattern 3.png"
           max-width="164px"
           max-height="164px"
-          style="z-index: 1; position: relative; top:-40px; right: -90px"
+          style="z-index: 1; position: relative; top:-90px; right: -90px"
         />
       </div>
     </section>
@@ -144,7 +144,7 @@
               width="25px"
               height="20px"
               style="position: relative; top:14px; right: 12px"
-              src="@/assets/icon1.svg"
+              src="@/assets/icon2.svg"
             />
           </div>
           <div style="position: absolute; top: 13px; right: 70px; width: 800px; font-weight: 600; font-size: 14px; line-height: 24px">
@@ -159,7 +159,7 @@
               width="25px"
               height="20px"
               style="position: relative; top:14px; right: 12px"
-              src="@/assets/icon1.svg"
+              src="@/assets/icon3.svg"
             />
           </div>
           <div style="position: absolute; top: 13px; right: 70px; width: 800px; font-weight: 600; font-size: 14px; line-height: 24px">
@@ -185,10 +185,10 @@
           src="@/assets/Ellipse 250.png"
           max-width="367.32px"
           max-height="367.32px"
-          style="z-index: 1; position: relative; bottom:-220px; right: 350px"
+          style="z-index: 1; position: relative; bottom:-260px; right: 350px"
         />
         <v-img
-          style="position: relative; top: 50px; right: 50px; border-radius: 40px; z-index: 2"
+          style="position: relative; top: 70px; right: 50px; border-radius: 40px; z-index: 2"
           src="@/assets/features.gif"
           max-width="700.98px"
           height="441px"
@@ -197,17 +197,93 @@
           src="@/assets/Dot Pattern 3.png"
           max-width="176px"
           max-height="191px"
-          style="z-index: 1; position: relative; top:10px; right: -40px"
+          style="z-index: 1; position: relative; top:25px; right: -40px"
         />
       </div>
     </section>
     <!-- /Features -->
+    <!-- Highlights -->
+    <section id="highlights">
+      <div
+        class="d-flex justify-center"
+      >
+        <h1 style="max-width: 542.55px; font-size: 24px; font-weight: 600 ">التطبيقات المميزه</h1>
+      </div>
+      <div
+        class="d-flex justify-center"
+      >
+        <h1 style=" font-size: 14px; font-weight: 400 ">تطبيقات تقدم حلول وخدمات مميزه نوصي بتجربتها</h1>
+      </div>
+      <div class="d-flex justify-center">
+        <v-card
+          v-for="i in 4"
+          :key="i"
+          color="rgba(250, 250, 252, 0.93)"
+          width="295.01px"
+          height="169.67px"
+          class="mx-10 mt-10"
+          elevation="0"
+        >
+          <v-card-title>
+            <v-img
+              style="display: block"
+              src="@/assets/mainlogo.png"
+              max-width="50px"
+              height="50px"
+            />
+            <span style="color: #8D5DA7; margin-top: -20px; margin-right: 10px"> قمره </span>
+            <div
+              class="mt-n5 mr-10"
+              style="font-size: 14px; color: #54A787"
+            >
+              <v-icon
+                color="#FFD12F"
+                class="mb-1"
+              >
+                mdi-star
+              </v-icon> 5
+            </div>
+          </v-card-title>
+          <v-card-subtitle style="margin-right: 64px; margin-top: -40px">
+            تطوير : <span style="color: #8D5DA7"> عمر سعد </span>
+          </v-card-subtitle>
+          <v-card-subtitle style="margin-right: 64px; margin-top: -10px; font-size: 10px">
+            نظام الولاء الأمثل الذي يمكنك من رفع مبيعاتك
+          </v-card-subtitle>
+          <v-card-subtitle style="margin-right: 64px; margin-top: -30px; font-size: 10px">
+            نظام الولاء الأمثل الذي يمكنك من رفع مبيعاتك
+          </v-card-subtitle>
+        </v-card>
+      </div>
+      <div class="d-flex justify-center mt-10">
+        <v-btn
+          color="#FFD12F"
+          text
+          style="font-weight: 600; font-size: 16px"
+        >
+          جميع التطبيقات
+          <v-icon>mdi-chevron-left</v-icon>
+        </v-btn>
+      </div>
+    </section>
+    <section id="footer">
+      <v-footer
+        height="238"
+        class="justify-center"
+        color="#835D9D"
+      >
+        <social-media large />
+      </v-footer>
+    </section>
   </div>
 </template>
 
 <script>
   export default {
     name: 'CoreView',
+    components: {
+      SocialMedia: () => import('@/components/SocialMedia'),
+    },
   }
 </script>
 
@@ -222,12 +298,16 @@
   height: 40vh;
 }
 #about {
-  height: 60vh;
+  height: 50vh;
   margin-bottom: 20vh
 }
 #features {
   height: 60vh;
   background-color: rgba(250, 250, 252, 0.93);
 
+}
+#highlights {
+  height: 80vh;
+  padding-top: 15%;
 }
 </style>
