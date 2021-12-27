@@ -9,7 +9,7 @@
     </div>
     <div class="d-flex justify-center mt-5">
       <v-icon
-        v-for="(item, i) in items.slice(0, large ? items.length : 3)"
+        v-for="(item, i) in items"
         :key="i"
         class="ma-5"
         color="white"
@@ -35,13 +35,6 @@
 
 <script>
   export default {
-    props: {
-      large: {
-        type: Boolean,
-        default: false,
-      },
-    },
-
     data () {
       return {
         items: [
@@ -62,7 +55,6 @@
             icon: 'mdi-twitter',
           },
         ],
-        iconforsupport: 'mdi-chat-outline',
       }
     },
   }
