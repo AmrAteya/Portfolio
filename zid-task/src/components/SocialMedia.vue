@@ -1,18 +1,23 @@
 <template>
   <div>
-    <v-btn
+    <v-img
+      class="justify-center ml-10"
+      src="@/assets/zid-logo.png"
+      max-height="50"
+      max-width="200"
+    />
+    <v-icon
       v-for="(item, i) in items.slice(0, large ? items.length : 3)"
       :key="i"
-      fab
-      class="ma-2"
-      color="info"
-      :small="!large"
-    >
-      <v-icon
-        dark
-        v-text="item.icon"
-      />
-    </v-btn>
+      large
+      class="ma-5"
+      color="white"
+      v-text="item.icon"
+    />
+    <v-icon
+      style="position: absolute; bottom: 20px; right: 40px"
+      v-text="iconforsupport"
+    />
   </div>
 </template>
 
@@ -25,29 +30,28 @@
       },
     },
 
-    data: () => ({
-      items: [
-        {
-          name: 'Twitter',
-          icon: 'mdi-twitter',
-        },
-        {
-          name: 'Instagram',
-          icon: 'mdi-instagram',
-        },
-        {
-          name: 'Facebook',
-          icon: 'mdi-facebook',
-        },
-        {
-          name: 'Email',
-          icon: 'mdi-email',
-        },
-        {
-          name: 'Phone',
-          icon: 'mdi-phone',
-        },
-      ],
-    }),
+    data () {
+      return {
+        items: [
+          {
+            name: 'Youtube',
+            icon: 'mdi-youtube',
+          },
+          {
+            name: 'Linkeding',
+            icon: 'mdi-linkedin',
+          },
+          {
+            name: 'Instagram',
+            icon: 'mdi-instagram',
+          },
+          {
+            name: 'Twitter',
+            icon: 'mdi-twitter',
+          },
+        ],
+        iconforsupport: 'mdi-chat',
+      }
+    },
   }
 </script>

@@ -1,60 +1,60 @@
 <template>
   <v-app-bar
-    v-scroll="onScroll"
-    :color="!isScrolling ? 'transparent' : 'white'"
-    fixed
+    class="app-bar"
+    color="white"
     flat
   >
     <v-slide-x-transition>
       <v-img
-        v-if="showLogo"
-        :src="require('@/assets/logo.png')"
+        src="@/assets/zid-logo.png"
         class="shrink"
         contain
-        height="50"
+        height="100"
       />
     </v-slide-x-transition>
-
-    <v-spacer />
-
-    <social-media />
-
-    <base-btn
-      class="ml-3"
-      large
-      href="https://store.vuetifyjs.com/product/freelancer-theme-free?ref=freelancer"
-    >
-      Download for Free
-
-      <v-icon
-        right
-        small
+    <div class="center">
+      <v-btn
+        text
+        class="ma-5"
       >
-        mdi-open-in-new
-      </v-icon>
-    </base-btn>
+        الرئيسيه
+      </v-btn>
+      <v-btn
+        text
+        class="ma-5"
+      >
+        التصنيفات
+      </v-btn>
+      <v-btn
+        text
+        class="ma-5"
+      >
+        التطبيقات
+      </v-btn>
+      <v-btn
+        text
+        class="ma-5"
+      >
+        طور التطبيقات
+      </v-btn>
+    </div>
   </v-app-bar>
 </template>
 
 <script>
   export default {
     name: 'CoreAppBar',
-
-    components: {
-      SocialMedia: () => import('@/components/SocialMedia'),
-    },
-
-    data: () => ({
-      showLogo: false,
-      isScrolling: false,
-    }),
-
-    methods: {
-      onScroll () {
-        const offset = window.pageYOffset
-        this.isScrolling = offset > 50
-        this.showLogo = offset > 200
-      },
-    },
   }
 </script>
+<style scoped>
+.app-bar {
+  position: absolute;
+  margin-right: 199.83px;
+  z-index: 10;
+  left: 449.52px;
+  right: 199.83px;
+  top: 0px;
+  display: inline-block;
+  height: 10vh;
+}
+</style>

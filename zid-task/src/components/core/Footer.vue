@@ -1,7 +1,8 @@
 <template>
   <v-footer
-    height="88"
+    height="238"
     class="justify-center"
+    color="#835D9D"
   >
     <social-media large />
   </v-footer>
