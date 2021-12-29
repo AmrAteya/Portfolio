@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="container">
     <!-- App bar -->
     <v-app-bar
       class="app-bar"
@@ -313,5 +313,10 @@
 #highlights {
   height: 80vh;
   padding-top: 15%;
+}
+
+#container {
+  width: 100%;
+  height: 100%
 }
 </style>
