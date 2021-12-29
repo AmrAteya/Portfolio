@@ -12,6 +12,7 @@
           class="shrink"
           contain
           height="100"
+          width="100"
         />
       </v-slide-x-transition>
       <div>
